@@ -15,7 +15,8 @@ class String
   end
 
   def count_sentences
-    array = self.chomp.split(/[.!?]/)
-    array.count
+    new_string = self.gsub(/(!!)/, "!")
+    array = new_string.split(/[.!?]/)
+    puts array.count
   end
 end
